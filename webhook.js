@@ -7,7 +7,7 @@ const app = express();
 app.post('/sms', (req, res) => {
   const twiml = new MessagingResponse();
 
-  twiml.message('The Robots are coming! Head for the hills!');
+  twiml.message('Thank you for entering my giveaway! It ends on 12/31/20 at 12:00 AM EST. You\'ll be contacted if you win!');
 
   res.writeHead(200, {'Content-Type': 'text/xml'});
   res.end(twiml.toString());
